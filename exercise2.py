@@ -38,6 +38,7 @@ def checksum (upc):
         print('Entered code is valid')
     else:
         raise TypeError('Entered code not of type string')
+
     if (len(upc) != 12):
         raise ValueError('UPC code does not contain 12 digits')
     else:
