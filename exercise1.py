@@ -40,16 +40,62 @@ def grade_to_gpa(grade):
         ValueError if parameter is out of range
     """
 
+
+
+    """
+    :param mark:
+    :return: :raise TypeError:
+    """
+
     letter_grade = ""
     gpa = 0.0
 
     if type(grade) is str:
-        print ("letter") # remove this line once the code is implemented
+        print ("letter")
+        if grade in ['A+','A','A-','B+','B','B-','FZ']:
+            print("valid input")
+            if(grade == "FZ"):
+                gpa= 0.0
+            elif(grade == "B-"):
+                gpa= 2.7
+            elif(grade == "B-"):
+                gpa= 2.7
+            elif(grade == "B"):
+                gpa = 3.0
+            elif(grade == "B+"):
+                gpa = 3.3
+            elif(grade == "A-"):
+                gpa = 3.7
+            elif(grade == "A"):
+                gpa = 4.0
+            elif(grade == "A+"):
+                gpa = 4.0
+        else:
+            raise ValueError("invalid range")
+
         # check that the grade is one of the accepted values
         # assign grade to letter_grade
     elif type(grade) is int:
-        print("mark") # remove this line once the code is implemented
         # check that grade is in the accepted range
+        print("mark")
+        if(0 <= grade <= 100):
+            print("valid input")
+
+            if(0 <= grade < 70):
+                gpa = 0.0
+            elif(70 <= grade < 73):
+                gpa = 2.7
+            elif(73 <= grade < 77):
+                gpa = 3.0
+            elif(77 <= grade < 80):
+                gpa = 3.3
+            elif(80 <= grade < 85):
+                gpa = 3.7
+            elif(85 <= grade <= 100):
+                gpa = 4.0
+        else:
+            raise ValueError("invalid range")
+
         # convert the numeric grade to a letter grade
         # assign the value to letter_grade
         # hint: letter_grade = mark_to_letter(grade)
@@ -58,9 +104,9 @@ def grade_to_gpa(grade):
         raise TypeError("Invalid type passed as parameter")
 
     # write a long if-statement to convert letter_grade
+    # what I am working on -----if type(letter_grade)
     # assign the value to gpa
     if letter_grade == "A":
         gpa = 4.0
 
     return gpa
-
