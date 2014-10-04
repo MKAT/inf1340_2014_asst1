@@ -53,6 +53,7 @@ def grade_to_gpa(grade):
         # convert the numeric grade to a letter grade
         # assign the value to letter_grade
         # hint: letter_grade = mark_to_letter(grade)
+
     else:
         # raise a TypeError exception
         raise TypeError("Invalid type passed as parameter")
