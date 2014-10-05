@@ -40,8 +40,6 @@ def grade_to_gpa(grade):
         ValueError if parameter is out of range
     """
 
-
-
     """
     :param mark:
     :return: :raise TypeError:
